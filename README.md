@@ -45,8 +45,11 @@ code with Pipeline.py.
 ### Architecture
 ![Architecture](https://github.com/KochPJ/follow_gaze_developmental_robotics/blob/master/architecture.png  "Architecture")
 
+In the image above a rough outline of the implemented architecture has been visualized.
+We used object oriented programming for coding the developmental joint attention model.
 
-We used object oriented programming for coding the follow_gaze project. We got the following classes:
+Each block in the memory corresponds to an class, which can be found in a seperate file.
+These classes are:
 - Memory
 - Decision
 - Learning
@@ -56,16 +59,21 @@ We used object oriented programming for coding the follow_gaze project. We got t
   - Ball
   - Face
   - Gaze
-- Motorcontroll
+- Motorcontrol
 
-The pipeline is handling each object instance of these clases. The camera is setup first.
-The memory then inherent the camera. And the remaining classes are then inharenting the memory. Thereby, each class can use the camera and get an image. Furtermore, all classes can communicate over the memory, where all variables are stored. The pipeline calles the functions of the created objects. Every function is run by the pipeline. Inside the pipeline it starts out by initializing and setup the robot proxies and objects. Afterwards, the main loop starts where the main pipeline is executed. The loop executes in the following algorithm:
-- setup the current run
-- while the run is not done do:
+The `Pipeline.py` file contains the main loop, and uses these classes to run an infinite number of trials, if not stopped by the user.
+
+Instantiating these classes in the Pipeline, the camera class is setup first.
+This camera class is passed to the memory module, such that every module with access to the memory can also request an image update.
+The remaining classes are then each passed the memory object, which contains the settings for each module, the camera object for requesting new frames, and can be used to pass variables to other modules.
+The pipeline calls the functions of the created objects, where every function is run by the pipeline.
+Inside the pipeline it starts out by initializing and setup the robot proxies and objects. Afterwards, the main loop starts where the main pipeline is executed. The loop executes the following steps:
+- setup the current trial
+- while the trial is not done:
   - get a face in the image
   - get the balls in the image
   - get the motivation of the robot
-  - make a decision based on the motivation
+  - make a decision based on the motivation and learned Q-values
   - execute the decision
-- safe learnings to a csv file (long term memory)
+- safe learned Q-values to a csv file (long term memory)
 - waiting for terminal input instructions (continue new trial, or shutdown)
