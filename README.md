@@ -28,9 +28,9 @@ code with Pipeline.py.
 
 ### Explaining the code
 We used object oriented programming for coding the follow_gaze project. We got the following classes:
+- Memory
 - Decision
 - Learning
-- Memory
 - Motivation
 - Perception
   - Camera
@@ -38,3 +38,17 @@ We used object oriented programming for coding the follow_gaze project. We got t
   - Face
   - Gaze
 - Motorcontroll
+
+The pipeline is handling each object instance of these clases. The camera is setup first. 
+The memory then inherent the camera. And the remaining classes are then inharenting the memory. Thereby, each class can use the camera and get an image. Furtermore, all classes can communicate over the memory, where all variables are stored. The pipeline calles the functions of the created objects. Every function is run by the pipeline. Inside the pipeline it starts out by initializing and setup the robot proxies and objects. Afterwards, the main loop starts where the main pipeline is executed. The loop executes in the following algorithm:
+- setup the current run
+- while the run is not done do:
+  - get a face in the image
+  - get the balls in the image
+  - get the motivation of the robot
+  - make a decision based on the motivation
+  - execute the decision
+- safe learnings to a csv file (long term memory)
+- waiting for terminal input instructions (continue new trial, or shutdown)
+
+
