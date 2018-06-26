@@ -43,7 +43,7 @@ code with Pipeline.py.
 
 
 ### Architecture
-![Architecture](https://github.com/KochPJ/follow_gaze_developmental_robotics/blob/master/architecture.png  "Architecture")
+![Architecture](https://github.com/KochPJ/follow_gaze_developmental_robotics/blob/master/architecture2.png  "Architecture")
 
 In the image above a rough outline of the implemented architecture has been visualized.
 We used object oriented programming for coding the developmental joint attention model.
