@@ -43,7 +43,7 @@ code with Pipeline.py.
 
 
 ### Architecture
-[logo]: https://github.com/KochPJ/follow_gaze_developmental_robotics/blob/master/architecture.png "Architecture"
+[Architecture](https://github.com/KochPJ/follow_gaze_developmental_robotics/blob/master/architecture.png  "Architecture")
 
 
 We used object oriented programming for coding the follow_gaze project. We got the following classes:
