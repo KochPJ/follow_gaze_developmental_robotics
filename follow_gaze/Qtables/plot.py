@@ -52,6 +52,7 @@ plt.xlabel("Runs")
 plt.ylabel("Probability")
 plt.show()
 
+
 line1, = plt.plot(Followgaze, label='Follow Gaze')
 line2, = plt.plot(left, label='Look Left')
 line3, = plt.plot(right, label='Look Right')
@@ -60,6 +61,7 @@ plt.title("Zero State Actions")
 plt.xlabel("Runs")
 plt.ylabel("Qvalue")
 plt.show()
+
 
 
 line1, = plt.plot(FollowgazeCloseBy, label='Close By')
@@ -72,6 +74,7 @@ plt.ylabel("Qvalue")
 plt.show()
 
 
+
 line1, = plt.plot(LeftCloseBy, label='Close By')
 line2, = plt.plot(LeftFarAway, label='Far Away')
 line3, = plt.plot(LeftContinueLooking, label='Continue Looking')
@@ -81,6 +84,8 @@ plt.xlabel("Runs")
 plt.ylabel("Qvalue")
 plt.show()
 
+
+
 line1, = plt.plot(RightCloseBy, label='Close By')
 line2, = plt.plot(RightFarAway, label='Far Away')
 line3, = plt.plot(RightContinueLooking, label='Continue Looking')
@@ -89,6 +94,3 @@ plt.legend(handles=[line1, line2, line3])
 plt.xlabel("Runs")
 plt.ylabel("Qvalue")
 plt.show()
-
-
-
