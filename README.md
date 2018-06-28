@@ -1,4 +1,4 @@
-### Learning Joint Attention in Developmental Robotics
+### Developmental approach to learning joint attention in Nao robot
 Learn to establish joint attention in a Nao robot, by following the gaze of a person to locate an intersting object, in this case a ball. 
 It uses [gaze following implemented in (mat)caffe]](http://gazefollow.csail.mit.edu/), face recognition and ball detection in OpenCV, and reinforcement learning (Q-learning) with OpenAI's Gym. 
 
