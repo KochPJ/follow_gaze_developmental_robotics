@@ -1,6 +1,6 @@
 ### Developmental approach to learning joint attention in a Nao robot
-Learn to establish joint attention in a Nao robot, by following the gaze of a person to locate an intersting object, in this case a ball. 
-It uses [gaze following implemented in (mat)caffe]](http://gazefollow.csail.mit.edu/), face recognition and ball detection in OpenCV, and reinforcement learning (Q-learning) with OpenAI's Gym. 
+Learn to establish joint attention in a Nao robot, by following the gaze of a person to locate an intersting object, in this case a ball.
+It uses [gaze following implemented in (mat)caffe]](http://gazefollow.csail.mit.edu/), face recognition and ball detection in OpenCV, and reinforcement learning (Q-learning) with OpenAI's Gym.
 
 ### Installation
 - Install the dependencies listed below
@@ -35,6 +35,8 @@ Add: addpath(genpath('/path/to/your/caffe/matlab'));
 Also add the same path to the predict_gaze.m .
 After both paths to matcaffe have been set in the follow_gaze.m and the predict_gaze.m file you can run the
 code with Pipeline.py.  
+  
+By default it will use the trained Q-values. If this is not desired, remove the last line of `statistics.csv`.
 
 ###
 The training process has been recorded, and can be seen found by clicking on the image below.  
